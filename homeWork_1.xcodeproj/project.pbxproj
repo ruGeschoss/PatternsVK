@@ -62,6 +62,8 @@
 		AA5766FF2160F2CD0029F786 /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5766FE2160F2CD0029F786 /* New.swift */; };
 		B7122EE2265C2C2600D23FC9 /* +UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7122EE1265C2C2600D23FC9 /* +UIColor.swift */; };
 		B7122EE5265C312F00D23FC9 /* +UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7122EE4265C312F00D23FC9 /* +UIFont.swift */; };
+		B7122EE7265C350A00D23FC9 /* AFServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7122EE6265C350A00D23FC9 /* AFServiceAdapter.swift */; };
+		B7122EEA265C3B6800D23FC9 /* AdapterFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7122EE9265C3B6800D23FC9 /* AdapterFriend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +124,8 @@
 		B1F60E259C4E88A48D0AC259 /* Pods-homeWork_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homeWork_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-homeWork_1/Pods-homeWork_1.debug.xcconfig"; sourceTree = "<group>"; };
 		B7122EE1265C2C2600D23FC9 /* +UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIColor.swift"; sourceTree = "<group>"; };
 		B7122EE4265C312F00D23FC9 /* +UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIFont.swift"; sourceTree = "<group>"; };
+		B7122EE6265C350A00D23FC9 /* AFServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFServiceAdapter.swift; sourceTree = "<group>"; };
+		B7122EE9265C3B6800D23FC9 /* AdapterFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterFriend.swift; sourceTree = "<group>"; };
 		CE1F4887F01F3E518C13D6ED /* Pods-homeWork_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homeWork_1.release.xcconfig"; path = "Pods/Target Support Files/Pods-homeWork_1/Pods-homeWork_1.release.xcconfig"; sourceTree = "<group>"; };
 		FB03EE607AE3B19FD932EA7A /* Pods_homeWork_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_homeWork_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -232,6 +236,7 @@
 		84D1DEB821AD5F16006FC20E /* service */ = {
 			isa = PBXGroup;
 			children = (
+				B7122EE8265C3B5200D23FC9 /* Adapter */,
 				8442ABA8219132B7003DDA6A /* AlamofireService.swift */,
 				8442ABAA2192EC0D003DDA6A /* VkResponseParser.swift */,
 				8442ABAF21957D2D003DDA6A /* RealmWorker.swift */,
@@ -418,6 +423,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B7122EE8265C3B5200D23FC9 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				B7122EE6265C350A00D23FC9 /* AFServiceAdapter.swift */,
+				B7122EE9265C3B6800D23FC9 /* AdapterFriend.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
 		DB9A454896C63B692F475996 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -581,6 +595,7 @@
 				842A0408216DB83F00FAFF92 /* CustomSearchBar.swift in Sources */,
 				8442ABAB2192EC0E003DDA6A /* VkResponseParser.swift in Sources */,
 				AA3D1EB121B25109000ED1C1 /* FirebaseService.swift in Sources */,
+				B7122EE7265C350A00D23FC9 /* AFServiceAdapter.swift in Sources */,
 				842A03E0216C860000FAFF92 /* CustomIndicator.swift in Sources */,
 				8415662D21B7916500AF9803 /* SearchGroupViewController.swift in Sources */,
 				84D1DEC021AE8AB9006FC20E /* VkCommentProfile.swift in Sources */,
@@ -602,6 +617,7 @@
 				AA5766FA2160EFE50029F786 /* NewsTableViewCellOld.swift in Sources */,
 				B7122EE5265C312F00D23FC9 /* +UIFont.swift in Sources */,
 				8442ABB021957D2D003DDA6A /* RealmWorker.swift in Sources */,
+				B7122EEA265C3B6800D23FC9 /* AdapterFriend.swift in Sources */,
 				AA5766EC2160B5A10029F786 /* FriendInfoViewController.swift in Sources */,
 				840110E021EC364C0044AEB7 /* TestViewController.swift in Sources */,
 				8424E560217845B700188E61 /* CustomInteractiveTransition.swift in Sources */,
