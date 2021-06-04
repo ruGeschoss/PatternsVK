@@ -66,6 +66,8 @@
 		B7122EEA265C3B6800D23FC9 /* AdapterFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7122EE9265C3B6800D23FC9 /* AdapterFriend.swift */; };
 		B7122EEC265C676A00D23FC9 /* VKFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7122EEB265C676A00D23FC9 /* VKFeedViewModel.swift */; };
 		B7122EEF265C6FFF00D23FC9 /* VKFeedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7122EEE265C6FFF00D23FC9 /* VKFeedFactory.swift */; };
+		B7A82926266A74D7002FAD45 /* AFServiceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A82925266A74D7002FAD45 /* AFServiceProxy.swift */; };
+		B7A82929266A78A7002FAD45 /* TaskOneHomeworkSix.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A82928266A78A7002FAD45 /* TaskOneHomeworkSix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +132,8 @@
 		B7122EE9265C3B6800D23FC9 /* AdapterFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterFriend.swift; sourceTree = "<group>"; };
 		B7122EEB265C676A00D23FC9 /* VKFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFeedViewModel.swift; sourceTree = "<group>"; };
 		B7122EEE265C6FFF00D23FC9 /* VKFeedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFeedFactory.swift; sourceTree = "<group>"; };
+		B7A82925266A74D7002FAD45 /* AFServiceProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFServiceProxy.swift; sourceTree = "<group>"; };
+		B7A82928266A78A7002FAD45 /* TaskOneHomeworkSix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOneHomeworkSix.swift; sourceTree = "<group>"; };
 		CE1F4887F01F3E518C13D6ED /* Pods-homeWork_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homeWork_1.release.xcconfig"; path = "Pods/Target Support Files/Pods-homeWork_1/Pods-homeWork_1.release.xcconfig"; sourceTree = "<group>"; };
 		FB03EE607AE3B19FD932EA7A /* Pods_homeWork_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_homeWork_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -240,6 +244,7 @@
 		84D1DEB821AD5F16006FC20E /* service */ = {
 			isa = PBXGroup;
 			children = (
+				B7A82927266A776F002FAD45 /* Proxy */,
 				B7122EED265C6FDE00D23FC9 /* Factory */,
 				B7122EE8265C3B5200D23FC9 /* Adapter */,
 				8442ABA8219132B7003DDA6A /* AlamofireService.swift */,
@@ -446,6 +451,15 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
+		B7A82927266A776F002FAD45 /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				B7A82925266A74D7002FAD45 /* AFServiceProxy.swift */,
+				B7A82928266A78A7002FAD45 /* TaskOneHomeworkSix.swift */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
 		DB9A454896C63B692F475996 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,6 +620,7 @@
 			files = (
 				AA5766F22160DBA70029F786 /* FriendHeaderTableViewCell.swift in Sources */,
 				AA5766EE2160CB9C0029F786 /* FriendCollectionViewCell.swift in Sources */,
+				B7A82929266A78A7002FAD45 /* TaskOneHomeworkSix.swift in Sources */,
 				842A0408216DB83F00FAFF92 /* CustomSearchBar.swift in Sources */,
 				8442ABAB2192EC0E003DDA6A /* VkResponseParser.swift in Sources */,
 				AA3D1EB121B25109000ED1C1 /* FirebaseService.swift in Sources */,
@@ -647,6 +662,7 @@
 				AA5766EA2160AE950029F786 /* FriendTableViewCell.swift in Sources */,
 				8424E54921743AA200188E61 /* ImagesViewController.swift in Sources */,
 				AA5766C42160A5AD0029F786 /* AppDelegate.swift in Sources */,
+				B7A82926266A74D7002FAD45 /* AFServiceProxy.swift in Sources */,
 				84D1DEBC21AE624A006FC20E /* NewsInfoViewController.swift in Sources */,
 				8442ABA9219132B7003DDA6A /* AlamofireService.swift in Sources */,
 				84C120962161C5AD0044CBEB /* GroupsViewController.swift in Sources */,

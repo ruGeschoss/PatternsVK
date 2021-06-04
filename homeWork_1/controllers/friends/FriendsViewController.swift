@@ -30,7 +30,7 @@ class FriendsViewController: UIViewController {
     private var groupedFriends = [FriendList]()
     private var filteredGroupedFriends = [FriendList]()
   
-  private let afServiceAdapter = AFServiceAdapter()
+  private let afServiceAdapter = AFServiceProxy(afService: AFServiceAdapter())
   private var allFriends: [AdapterFriend] = []
     
     
