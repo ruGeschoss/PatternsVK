@@ -60,6 +60,12 @@
 		AA5766FA2160EFE50029F786 /* NewsTableViewCellOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5766F92160EFE50029F786 /* NewsTableViewCellOld.swift */; };
 		AA5766FD2160F0C10029F786 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5766FC2160F0C10029F786 /* NewsViewController.swift */; };
 		AA5766FF2160F2CD0029F786 /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5766FE2160F2CD0029F786 /* New.swift */; };
+		B7122EE2265C2C2600D23FC9 /* +UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7122EE1265C2C2600D23FC9 /* +UIColor.swift */; };
+		B7122EE5265C312F00D23FC9 /* +UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7122EE4265C312F00D23FC9 /* +UIFont.swift */; };
+		B7122EE7265C350A00D23FC9 /* AFServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7122EE6265C350A00D23FC9 /* AFServiceAdapter.swift */; };
+		B7122EEA265C3B6800D23FC9 /* AdapterFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7122EE9265C3B6800D23FC9 /* AdapterFriend.swift */; };
+		B7122EEC265C676A00D23FC9 /* VKFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7122EEB265C676A00D23FC9 /* VKFeedViewModel.swift */; };
+		B7122EEF265C6FFF00D23FC9 /* VKFeedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7122EEE265C6FFF00D23FC9 /* VKFeedFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +124,12 @@
 		AA5766FC2160F0C10029F786 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		AA5766FE2160F2CD0029F786 /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
 		B1F60E259C4E88A48D0AC259 /* Pods-homeWork_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homeWork_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-homeWork_1/Pods-homeWork_1.debug.xcconfig"; sourceTree = "<group>"; };
+		B7122EE1265C2C2600D23FC9 /* +UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIColor.swift"; sourceTree = "<group>"; };
+		B7122EE4265C312F00D23FC9 /* +UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIFont.swift"; sourceTree = "<group>"; };
+		B7122EE6265C350A00D23FC9 /* AFServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFServiceAdapter.swift; sourceTree = "<group>"; };
+		B7122EE9265C3B6800D23FC9 /* AdapterFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterFriend.swift; sourceTree = "<group>"; };
+		B7122EEB265C676A00D23FC9 /* VKFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFeedViewModel.swift; sourceTree = "<group>"; };
+		B7122EEE265C6FFF00D23FC9 /* VKFeedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFeedFactory.swift; sourceTree = "<group>"; };
 		CE1F4887F01F3E518C13D6ED /* Pods-homeWork_1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homeWork_1.release.xcconfig"; path = "Pods/Target Support Files/Pods-homeWork_1/Pods-homeWork_1.release.xcconfig"; sourceTree = "<group>"; };
 		FB03EE607AE3B19FD932EA7A /* Pods_homeWork_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_homeWork_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -228,6 +240,8 @@
 		84D1DEB821AD5F16006FC20E /* service */ = {
 			isa = PBXGroup;
 			children = (
+				B7122EED265C6FDE00D23FC9 /* Factory */,
+				B7122EE8265C3B5200D23FC9 /* Adapter */,
 				8442ABA8219132B7003DDA6A /* AlamofireService.swift */,
 				8442ABAA2192EC0D003DDA6A /* VkResponseParser.swift */,
 				8442ABAF21957D2D003DDA6A /* RealmWorker.swift */,
@@ -281,10 +295,10 @@
 		AA5766D52160A6EC0029F786 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				B7122EE3265C310F00D23FC9 /* Extensions */,
 				AA5766C32160A5AD0029F786 /* AppDelegate.swift */,
 				AA5766CA2160A5AF0029F786 /* Assets.xcassets */,
 				AA5766CC2160A5AF0029F786 /* LaunchScreen.storyboard */,
-				AA5766E22160AD140029F786 /* Extension.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -349,6 +363,7 @@
 				AA5766E52160AD8C0029F786 /* Friend.swift */,
 				AA5766EF2160D82B0029F786 /* FriendList.swift */,
 				AA5766FE2160F2CD0029F786 /* New.swift */,
+				B7122EEB265C676A00D23FC9 /* VKFeedViewModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -402,6 +417,33 @@
 				84D1DEBB21AE624A006FC20E /* NewsInfoViewController.swift */,
 			);
 			path = news;
+			sourceTree = "<group>";
+		};
+		B7122EE3265C310F00D23FC9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B7122EE1265C2C2600D23FC9 /* +UIColor.swift */,
+				B7122EE4265C312F00D23FC9 /* +UIFont.swift */,
+				AA5766E22160AD140029F786 /* Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B7122EE8265C3B5200D23FC9 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				B7122EE6265C350A00D23FC9 /* AFServiceAdapter.swift */,
+				B7122EE9265C3B6800D23FC9 /* AdapterFriend.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		B7122EED265C6FDE00D23FC9 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				B7122EEE265C6FFF00D23FC9 /* VKFeedFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		DB9A454896C63B692F475996 /* Pods */ = {
@@ -567,6 +609,7 @@
 				842A0408216DB83F00FAFF92 /* CustomSearchBar.swift in Sources */,
 				8442ABAB2192EC0E003DDA6A /* VkResponseParser.swift in Sources */,
 				AA3D1EB121B25109000ED1C1 /* FirebaseService.swift in Sources */,
+				B7122EE7265C350A00D23FC9 /* AFServiceAdapter.swift in Sources */,
 				842A03E0216C860000FAFF92 /* CustomIndicator.swift in Sources */,
 				8415662D21B7916500AF9803 /* SearchGroupViewController.swift in Sources */,
 				84D1DEC021AE8AB9006FC20E /* VkCommentProfile.swift in Sources */,
@@ -586,14 +629,18 @@
 				84EC564A21A2A2DB00C8542C /* VkFeed.swift in Sources */,
 				8424E55C2177401700188E61 /* CustomNavigationController.swift in Sources */,
 				AA5766FA2160EFE50029F786 /* NewsTableViewCellOld.swift in Sources */,
+				B7122EE5265C312F00D23FC9 /* +UIFont.swift in Sources */,
 				8442ABB021957D2D003DDA6A /* RealmWorker.swift in Sources */,
+				B7122EEA265C3B6800D23FC9 /* AdapterFriend.swift in Sources */,
 				AA5766EC2160B5A10029F786 /* FriendInfoViewController.swift in Sources */,
 				840110E021EC364C0044AEB7 /* TestViewController.swift in Sources */,
 				8424E560217845B700188E61 /* CustomInteractiveTransition.swift in Sources */,
 				AA5766E12160AC5B0029F786 /* FriendsViewController.swift in Sources */,
+				B7122EE2265C2C2600D23FC9 /* +UIColor.swift in Sources */,
 				AA5766E62160AD8C0029F786 /* Friend.swift in Sources */,
 				84D1DEC521AE926B006FC20E /* CommentTableViewCell.swift in Sources */,
 				84D1DEBE21AE745D006FC20E /* NewsInfoTableViewCell.swift in Sources */,
+				B7122EEC265C676A00D23FC9 /* VKFeedViewModel.swift in Sources */,
 				84105FB3217F173D00EEF673 /* VKApiViewController.swift in Sources */,
 				844ACE372186D98900565895 /* VkGroup.swift in Sources */,
 				AA5766F72160E9080029F786 /* CustomLike.swift in Sources */,
@@ -604,6 +651,7 @@
 				8442ABA9219132B7003DDA6A /* AlamofireService.swift in Sources */,
 				84C120962161C5AD0044CBEB /* GroupsViewController.swift in Sources */,
 				AA5766FD2160F0C10029F786 /* NewsViewController.swift in Sources */,
+				B7122EEF265C6FFF00D23FC9 /* VKFeedFactory.swift in Sources */,
 				AA5766E32160AD140029F786 /* Extension.swift in Sources */,
 				8424E55521773EDC00188E61 /* CustomPopAnimator.swift in Sources */,
 				84D1DEC221AE8CFD006FC20E /* VkComment.swift in Sources */,

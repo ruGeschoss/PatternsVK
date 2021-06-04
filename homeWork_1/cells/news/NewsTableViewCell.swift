@@ -108,36 +108,36 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     
-    func configure(feed: VkFeed) {
+    func configure(feed: VKFeedViewModel) {
         
-        labelDate.text = feed.getFeedDate()
-        labelFeedGroupHeader.text = feed.sourceName
-        
-        if feed.feedText.count == 0 {
-            labelText.pin.height(0)
-        } else {
-            labelText.pin.height(70)
-        }
-        
-        labelText.text = feed.feedText
-        labelLike.text = feed.getStringFrom(count: feed.countLikes)
-        labelViews.text = feed.getStringFrom(count: feed.countViews)
-        labelShare.text = feed.getStringFrom(count: feed.countReposts)
-        labelComment.text = feed.getStringFrom(count: feed.countComments)
+      labelDate.text = feed.feedDate
+      labelFeedGroupHeader.text = feed.sourceName
+      labelText.text = feed.feedText
+      labelLike.text = feed.countLikes
+      labelViews.text = feed.countViews
+      labelShare.text = feed.countReposts
+      labelComment.text = feed.countComments
+      
+      if feed.feedText.count == 0 {
+          labelText.pin.height(0)
+      } else {
+          labelText.pin.height(70)
+      }
         
         imageViewGroup.sd_setImage(with: URL(string: feed.sourceUrl), placeholderImage: UIImage(named: "noPhoto"))
+      
+      if let height = feed.attachmentHeight,
+         let width = feed.attachmentWidth,
+         let stringURL = feed.attachmentURL {
         
-        if feed.attachments.count > 0 {
-            
-            let height = self.frame.width * CGFloat(feed.attachments[0].height) / CGFloat(feed.attachments[0].width)
-            
-            imageNew.pin.height(height)
-            
-            imageNew.sd_setImage(with: URL(string: feed.attachments[0].imageUrl), placeholderImage: UIImage(named: "noPhoto"))
-            
-        } else {
-            imageNew.pin.height(0)
-        }
+        let newHeight = self.frame.width * CGFloat(height) / CGFloat(width)
+        
+        imageNew.pin.height(newHeight)
+        
+        imageNew.sd_setImage(with: URL(string: stringURL), placeholderImage: UIImage(named: "noPhoto"))
+      } else {
+        imageNew.pin.height(0)
+      }
         
         setNeedsLayout()
         layoutIfNeeded()

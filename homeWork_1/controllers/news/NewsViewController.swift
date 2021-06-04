@@ -19,6 +19,9 @@ class NewsViewController: UIViewController {
     
     
     private var feeds = [VkFeed]()
+  
+  private let feedFactory = VKFeedFactory()
+  private var feedViewModels: [VKFeedViewModel] = []
     
     var startFrom = ""
     private var needClearNews = true
@@ -92,12 +95,13 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return feeds.count
+      feedViewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as! NewsTableViewCell
-        cell.configure(feed: feeds[indexPath.row])
+      let feed = feedViewModels[indexPath.row]
+      cell.configure(feed: feed)
         cell.delegate = self
         return cell
     }
@@ -110,7 +114,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     open func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == feeds.count - 2 && !isLoad {
+        if indexPath.row == feedViewModels.count - 2 && !isLoad {
             
             prepareGetFeeds(needClearNews: false)
         }
@@ -118,9 +122,11 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+      
+      let model = feedViewModels[indexPath.row]
         
-        textHeight = feeds[indexPath.row].feedText.count > 0 ? 70 : 0
-        imageHeight = feeds[indexPath.row].attachments.count > 0 ? self.view.frame.width * CGFloat(feeds[indexPath.row].attachments[0].height) / CGFloat(feeds[indexPath.row].attachments[0].width) : 0
+      textHeight = model.feedText.count > 0 ? 70 : 0
+      imageHeight = model.attachmentURL != nil ? self.view.frame.width * CGFloat(model.attachmentHeight!) / CGFloat(model.attachmentWidth!) : 0
         let height = CGFloat(10 + 10 + 60 + imageHeight + textHeight + 40 + 10)
         
         return height
@@ -152,9 +158,12 @@ extension NewsViewController: VkApiFeedsDelegate {
         isLoad = false
         if needClearNews {
             self.feeds.removeAll()
+          feedViewModels.removeAll()
             tableView.reloadData()
         }
         self.feeds.append(contentsOf: feeds)
+      let models = feedFactory.constructViewModels(from: feeds)
+      feedViewModels.append(contentsOf: models)
         tableView.reloadData()
         //        self.addNewCells(array: feeds)
 
@@ -169,7 +178,8 @@ extension NewsViewController: VkApiFeedsDelegate {
                 indexPaths.append(NSIndexPath(row: row, section: 0))
             }
             feeds.append(contentsOf: array)
-            
+          let models = feedFactory.constructViewModels(from: array)
+          feedViewModels.append(contentsOf: models)
             tableView.insertRows(at: indexPaths as [IndexPath], with: .automatic)
             tableView.endUpdates()
         }
