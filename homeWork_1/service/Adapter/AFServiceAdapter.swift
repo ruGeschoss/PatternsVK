@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol AFServiceAdapterInterface {
+  func loadFriends(completion: @escaping ([AdapterFriend]) -> Void)
+}
+
 final class AFServiceAdapter {
   
   private let afService = AlamofireService.instance
